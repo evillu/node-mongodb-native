@@ -1,0 +1,18 @@
+'use strict';
+
+const SECOND_TO_NS = 1e9;
+const MINUTE_TO_MS = 60 * 1e3;
+const FIVE_MINUTES_TO_MS = MINUTE_TO_MS * 5;
+const B_TO_MB = 1e-6;
+
+const MIN_EXECUTION_TIME = process.env.DRIVER_BENCH_MIN_EX_TIME || MINUTE_TO_MS;
+const MAX_EXECUTION_TIME = process.env.DRIVER_BENCH_MAX_EX_TIME || FIVE_MINUTES_TO_MS;
+const MIN_EXECUTION_COUNT = process.env.DRIVER_BENCH_MIN_EX_COUNT || 100;
+
+module.exports = {
+  SECOND_TO_NS,
+  B_TO_MB,
+  MIN_EXECUTION_COUNT,
+  MIN_EXECUTION_TIME,
+  MAX_EXECUTION_TIME
+};
